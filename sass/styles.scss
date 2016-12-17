@@ -9,6 +9,21 @@ $bg-color-bright: SpringGreen;
 $padding: 10px;
  
 // Media Query Ranges 
+@media screen and (min-width: 600px) {
+    body {
+        background-color: orange;
+        text-align: center;
+        color: #EEE;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background-color: orange;
+        text-align: center;
+        color: #EEE;
+    }
+}
  
 // Mixins
 
@@ -33,8 +48,8 @@ h2 {
  
  
 .block_family {
-  max-width:350px;
-  margin:auto;
+  max-width: 350px;
+  margin: auto;
 }
  
 .block_family li {
