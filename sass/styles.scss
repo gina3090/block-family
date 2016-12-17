@@ -3,9 +3,9 @@
 @import "./partials/_clearfix";
 
 // Variables
-$bg-color-dark: Navy;
-$bg-color-light: Pink;
-$bg-color-bright: MediumSpringGreen;
+$bg-color-dark: SeaGreen;
+$bg-color-light: SeaShell;
+$bg-color-bright: SpringGreen;
 $padding: 10px;
  
 // Media Query Ranges 
@@ -13,31 +13,31 @@ $padding: 10px;
 // Mixins
 
 // Styles
-body{
+body {
   background-color: orange;
   text-align: center;
   color: #EEE;
 }
  
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
 }
  
-h1{
+h1 {
   padding: 20px;
 }
  
-h2{
+h2 {
  
 }
  
  
-.block_family{
+.block_family {
   max-width:350px;
   margin:auto;
 }
  
-.block_family li{
+.block_family li {
   background-color: #222;
   margin-bottom: 20px;
   padding: 20px;
