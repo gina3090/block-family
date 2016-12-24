@@ -3,39 +3,22 @@
 @import "./partials/_clearfix";
 
 // Variables
-$bg-color-dark: SeaGreen;
-$bg-color-light: SeaShell;
-$bg-color-bright: SpringGreen;
+$bg-color-dark: seagreen;
+$bg-color-light: seashell;
+$bg-color-bright: springgreen;
 $padding: 10px;
  
-// Media Query Ranges 
-@media screen and (min-width: 600px) {
-    body {
-        background-color: $bg-color-dark;
-        text-align: center;
-        color: #EEE;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    body {
-        background-color: $bg-color-dark;
-        text-align: center;
-        color: $bg-color-light;
-    }
-}
- 
 // Mixins
-@mixin block_font ($block_font_size: 25px, $block_font_color: $bg-color-light) {
+@mixin block_font ($block_font_size, $block_font_color) {
   font-size: $block_font_size;
   color: $block_font_color;
 }
 
 // Styles
 body {
-  background-color: $bg-color-dark;
+  background-color: navy;
   text-align: center;
-  color: $bg-color-light;
+  color: turquoise;
 }
  
 h1, h2, h3, h4 {
@@ -44,12 +27,13 @@ h1, h2, h3, h4 {
  
 h1 {
   padding: $padding;
+  font-size: 24px;
+  color: blue;
 }
  
 h2 {
-  padding: $padding; 
+  @include block_font(12px, turquoise); 
 }
- 
  
 .block_family {
   max-width: 350px;
@@ -57,7 +41,76 @@ h2 {
 }
  
 .block_family li {
-  background-color: $bg-color-bright;
+  background-color: blue;
   margin-bottom: 20px;
   padding: $padding;
+}
+
+// Media Query Ranges 
+@media screen and (min-width: 600px) {
+  body {
+    background-color: indigo;
+    text-align: center;
+    color: white;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  }
+ 
+  h1 {
+    padding: $padding;
+    font-size: 24px;
+    color: violet;
+  }
+ 
+  h2 {
+    padding: $padding; 
+    font-size: 12px;
+    color: pink;
+  }
+ 
+  .block_family {
+    max-width: 550px;
+    margin: auto;
+  }
+ 
+  .block_family li {
+    background-color: violet;
+    margin-bottom: 20px;
+    padding: $padding;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-color: $bg-color-dark;
+    text-align: center;
+    color: $bg-color-light;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  }
+ 
+  h1 {
+    padding: $padding;
+    font-size: 24px;
+    color: $bg-color-bright;
+  }
+ 
+  h2 {
+    @include block_font(12px, $bg-color-light);
+  }
+ 
+  .block_family {
+    max-width: 850px;
+    margin: auto;
+  }
+ 
+  .block_family li {
+    background-color: $bg-color-bright;
+    margin-bottom: 20px;
+    padding: $padding;
+  }
 }
